@@ -16,7 +16,7 @@ void printshoppingList(vector<string> &sL)
 {
   int t = 1;
   ofstream list;
-  list.open("Shopping_List.txt", ios::out);
+  list.open("Shopping_List.txt", ios::out | ios::app);
   
   list <<"\n*********SHOPPING LIST********" <<endl;
   for(string x : sL)
@@ -50,9 +50,9 @@ void showshoppingList(vector<string> &sL)
   reverse(sL.begin(), sL.end());
   
   cout <<"\n*********SHOPPING LIST********" <<endl;
+  int t = 1;
   for(string x : sL)
   {
-    int t = 1;
     cout << t++ << ".) " << x << endl;
   }
   
